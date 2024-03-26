@@ -30,28 +30,25 @@ body {
 
 #dedication p {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto 0 auto; /* Adjust top margin to move the paragraph down */
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
-#languages {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 #languages button {
   margin: 5px;
   padding: 10px 20px;
   font-size: 16px;
-  border: 2px solid #333;
+  border: 2px solid black;
   background-color: #fff;
   color: #333;
   cursor: pointer;
+  background-color: ;
 }
 
 #languages button:hover {
-  background-color: #333;
+  background-color: #70002e;
   color: #fff;
+  border-color: whitesmoke;
 }
 button {
   margin: 5px;
@@ -64,8 +61,9 @@ button {
 }
 
 button:hover {
-  background-color: #333;
+  background-color: #70002e;
   color: #fff;
+  border-color: whitesmoke;
 }
 
 @media only screen and (max-width: 600px) {
@@ -85,4 +83,82 @@ button:hover {
   color: #007bff;
   font-size: 18px;
   margin-left: 10px;
+}
+/* Responsive styling */
+@media only screen and (max-width: 600px) {
+  #dedication p {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 1.4; /* Decrease line height for smaller screens */
+  }
+}
+/* Style for the pronunciation indicator emoji */
+.pronunciation-indicator {
+  cursor: pointer; /* Change cursor to pointer when hovering over the emoji */
+}
+
+/* Style for the pronunciation indicator emoji when hovered over */
+.pronunciation-indicator:hover {
+  transform: scale(1.2); /* Enlarge the emoji when hovered over */
+}
+
+/* Style for the pronunciation indicator emoji when clicked */
+.pronunciation-indicator:active {
+  transform: scale(1.1); /* Shrink the emoji slightly when clicked */
+}
+.words-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.words-list li {
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.words-list li:hover {
+  transform: translateY(-3px);
+}
+
+.pronunciation-indicator {
+  color: #007bff;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* Add hover effect for pronunciation indicator */
+.pronunciation-indicator:hover {
+  color: #0056b3;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 600px) {
+  .words-list li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Stack categories each under the other for mobile view */
+  .words-list li {
+    width: 100%;
+  }
+}
+
+/* Style for the pronunciation indicator emoji */
+.pronunciation-indicator {
+  cursor: pointer; /* Change cursor to pointer when hovering over the emoji */
+}
+
+/* Style for the pronunciation indicator emoji when hovered over */
+.pronunciation-indicator:hover {
+  transform: scale(1.2); /* Enlarge the emoji when hovered over */
+}
+
+/* Style for the pronunciation indicator emoji when clicked */
+.pronunciation-indicator:active {
+  transform: scale(1.1); /* Shrink the emoji slightly when clicked */
 }

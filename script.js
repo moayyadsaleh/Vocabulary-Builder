@@ -35,12 +35,13 @@ function selectCategory(category) {
     listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
     // Adding pronunciation using Responsive Voice API
     const pronunciation = wordObj.pronunciation || wordObj.word;
-    const pronounceButton = document.createElement("button");
-    pronounceButton.textContent = "Pronounce";
-    pronounceButton.addEventListener("click", () => {
+    const pronunciationIndicator = document.createElement("span");
+    pronunciationIndicator.textContent = "🔊";
+    pronunciationIndicator.classList.add("pronunciation-indicator");
+    pronunciationIndicator.addEventListener("click", () => {
       pronounceWord(pronunciation, currentLanguage);
     });
-    listItem.appendChild(pronounceButton);
+    listItem.appendChild(pronunciationIndicator);
     wordsList.appendChild(listItem);
   });
   document.getElementById("words").style.display = "block";
