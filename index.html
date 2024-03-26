@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=2eYlkhVr"></script>
+  </head>
+  <body>
+    <!-- Left Logo -->
+    <img
+      id="left-logo"
+      src="https://live.staticflickr.com/65535/51262624119_07fb913283_z.jpg"
+      alt="Left Logo"
+    />
+
+    <!-- Right Logo -->
+    <img
+      id="right-logo"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/University_of_Montana_logo.png/1200px-University_of_Montana_logo.png"
+      alt="Right Logo"
+    />
+
+    <div id="dedication">
+      <p>
+        This Vocabulary Builder app is a dedicated effort from the University of
+        Montana-DCLCP to support special forces personnel. Designed to aid
+        language learning, this app offers a selection of languages including
+        Arabic, Spanish, French, and Korean. Users can choose from various
+        categories such as animals, food, colors, numbers, vegetables, and
+        family to expand their vocabulary.
+      </p>
+
+      <div id="languages">
+        <button onclick="selectLanguage('arabic')">Arabic</button>
+        <button onclick="selectLanguage('spanish')">Spanish</button>
+        <button onclick="selectLanguage('french')">French</button>
+        <button onclick="selectLanguage('korean')">Korean</button>
+        <button onclick="selectLanguage('chinese')">Chinese</button>
+        <button onclick="selectLanguage('persian')">Persian</button>
+        <button onclick="selectLanguage('russian')">Russian</button>
+        <button onclick="selectLanguage('thai')">Thai</button>
+      </div>
+      <div id="categories" style="display: none">
+        <button onclick="selectCategory('animals')">Animals</button>
+        <button onclick="selectCategory('food')">Food</button>
+        <button onclick="selectCategory('colors')">Colors</button>
+        <button onclick="selectCategory('numbers')">Numbers</button>
+        <button onclick="selectCategory('vegetables')">Vegetables</button>
+        <button onclick="selectCategory('family')">Family</button>
+      </div>
+      <div id="words" style="display: none">
+        <ul id="wordsList" class="words-list">
+          <!-- Words will be displayed here -->
+          <li onclick="pronounceWord(this)">
+            Word 1 <span class="pronunciation-indicator">(🔊)</span>
+          </li>
+          <li onclick="pronounceWord(this)">
+            Word 2 <span class="pronunciation-indicator">(🔊)</span>
+          </li>
+          <li onclick="pronounceWord(this)">
+            Word 3 <span class="pronunciation-indicator">(🔊)</span>
+          </li>
+          <!-- Add more words as needed -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
