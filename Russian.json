@@ -1,0 +1,38 @@
+{
+    "animals": [
+        {"word": "кошка", "translation": "cat"},
+        {"word": "собака", "translation": "dog"},
+        {"word": "мышь", "translation": "mouse"},
+        {"word": "птица", "translation": "bird"}
+    ],
+    "food": [
+        {"word": "хлеб", "translation": "bread"},
+        {"word": "мясо", "translation": "meat"},
+        {"word": "рис", "translation": "rice"},
+        {"word": "фрукты", "translation": "fruit"}
+    ],
+    "colors": [
+        {"word": "красный", "translation": "red"},
+        {"word": "желтый", "translation": "yellow"},
+        {"word": "синий", "translation": "blue"},
+        {"word": "зеленый", "translation": "green"}
+    ],
+    "numbers": [
+        {"word": "один", "translation": "one"},
+        {"word": "два", "translation": "two"},
+        {"word": "три", "translation": "three"},
+        {"word": "четыре", "translation": "four"}
+    ],
+    "vegetables": [
+        {"word": "картошка", "translation": "potato"},
+        {"word": "морковь", "translation": "carrot"},
+        {"word": "помидор", "translation": "tomato"},
+        {"word": "фасоль", "translation": "beans"}
+    ],
+    "family": [
+        {"word": "отец", "translation": "father"},
+        {"word": "мать", "translation": "mother"},
+        {"word": "сын", "translation": "son"},
+        {"word": "дочь", "translation": "daughter"}
+    ]
+}

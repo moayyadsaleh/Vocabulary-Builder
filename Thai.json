@@ -1,0 +1,38 @@
+{
+    "animals": [
+        {"word": "แมว", "translation": "cat"},
+        {"word": "หมา", "translation": "dog"},
+        {"word": "หนู", "translation": "mouse"},
+        {"word": "นก", "translation": "bird"}
+    ],
+    "food": [
+        {"word": "ขนมปัง", "translation": "bread"},
+        {"word": "เนื้อ", "translation": "meat"},
+        {"word": "ข้าว", "translation": "rice"},
+        {"word": "ผลไม้", "translation": "fruit"}
+    ],
+    "colors": [
+        {"word": "แดง", "translation": "red"},
+        {"word": "เหลือง", "translation": "yellow"},
+        {"word": "ฟ้า", "translation": "blue"},
+        {"word": "เขียว", "translation": "green"}
+    ],
+    "numbers": [
+        {"word": "หนึ่ง", "translation": "one"},
+        {"word": "สอง", "translation": "two"},
+        {"word": "สาม", "translation": "three"},
+        {"word": "สี่", "translation": "four"}
+    ],
+    "vegetables": [
+        {"word": "มันฝรั่ง", "translation": "potato"},
+        {"word": "แครอท", "translation": "carrot"},
+        {"word": "มะเขือเทศ", "translation": "tomato"},
+        {"word": "ถั่ว", "translation": "beans"}
+    ],
+    "family": [
+        {"word": "พ่อ", "translation": "father"},
+        {"word": "แม่", "translation": "mother"},
+        {"word": "ลูกชาย", "translation": "son"},
+        {"word": "ลูกสาว", "translation": "daughter"}
+    ]
+}

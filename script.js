@@ -1,10 +1,10 @@
 let vocabulary;
 
 // Function to load JSON data
-function loadData(callback) {
+function loadData(language, callback) {
   const xhr = new XMLHttpRequest();
   xhr.overrideMimeType("application/json");
-  xhr.open("GET", "data.json", true);
+  xhr.open("GET", `${language}.json`, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       callback(xhr.responseText);
@@ -13,10 +13,12 @@ function loadData(callback) {
   xhr.send(null);
 }
 
-// Load vocabulary data
-loadData(function (response) {
-  vocabulary = JSON.parse(response);
-});
+// Load vocabulary data for a specific language
+function loadLanguageData(language) {
+  loadData(language, function (response) {
+    vocabulary = JSON.parse(response);
+  });
+}
 
 let currentLanguage;
 
@@ -25,12 +27,13 @@ function selectLanguage(language) {
   categoriesDiv.style.display = "block";
   document.getElementById("words").style.display = "none";
   currentLanguage = language;
+  loadLanguageData(language); // Load vocabulary data for the selected language
 }
 
 function selectCategory(category) {
   const wordsList = document.getElementById("wordsList");
   wordsList.innerHTML = "";
-  vocabulary.languages[currentLanguage][category].forEach((wordObj) => {
+  vocabulary[category].forEach((wordObj) => {
     const listItem = document.createElement("li");
     listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
     // Adding pronunciation using Responsive Voice API
@@ -68,7 +71,7 @@ function getVoiceForLanguage(language) {
     french: "French Female",
     korean: "Korean Female",
     chinese: "Chinese Female",
-    persian: "Farsi Female",
+    persian: "Arabic Female",
     russian: "Russian Female",
     thai: "Thai Female",
   };

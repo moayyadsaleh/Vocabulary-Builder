@@ -1,0 +1,38 @@
+{
+    "animals": [
+        {"word": "chat", "translation": "cat"},
+        {"word": "chien", "translation": "dog"},
+        {"word": "souris", "translation": "mouse"},
+        {"word": "oiseau", "translation": "bird"}
+    ],
+    "food": [
+        {"word": "pain", "translation": "bread"},
+        {"word": "viande", "translation": "meat"},
+        {"word": "riz", "translation": "rice"},
+        {"word": "fruit", "translation": "fruit"}
+    ],
+    "colors": [
+        {"word": "rouge", "translation": "red"},
+        {"word": "jaune", "translation": "yellow"},
+        {"word": "bleu", "translation": "blue"},
+        {"word": "vert", "translation": "green"}
+    ],
+    "numbers": [
+        {"word": "un", "translation": "one"},
+        {"word": "deux", "translation": "two"},
+        {"word": "trois", "translation": "three"},
+        {"word": "quatre", "translation": "four"}
+    ],
+    "vegetables": [
+        {"word": "pomme de terre", "translation": "potato"},
+        {"word": "carotte", "translation": "carrot"},
+        {"word": "tomate", "translation": "tomato"},
+        {"word": "haricot", "translation": "beans"}
+    ],
+    "family": [
+        {"word": "père", "translation": "father"},
+        {"word": "mère", "translation": "mother"},
+        {"word": "fils", "translation": "son"},
+        {"word": "fille", "translation": "daughter"}
+    ]
+}

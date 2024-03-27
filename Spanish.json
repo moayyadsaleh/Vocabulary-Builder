@@ -1,0 +1,38 @@
+{
+    "animals": [
+        {"word": "gato", "translation": "cat"},
+        {"word": "perro", "translation": "dog"},
+        {"word": "ratón", "translation": "mouse"},
+        {"word": "pájaro", "translation": "bird"}
+    ],
+    "food": [
+        {"word": "pan", "translation": "bread"},
+        {"word": "carne", "translation": "meat"},
+        {"word": "arroz", "translation": "rice"},
+        {"word": "fruta", "translation": "fruit"}
+    ],
+    "colors": [
+        {"word": "rojo", "translation": "red"},
+        {"word": "amarillo", "translation": "yellow"},
+        {"word": "azul", "translation": "blue"},
+        {"word": "verde", "translation": "green"}
+    ],
+    "numbers": [
+        {"word": "uno", "translation": "one"},
+        {"word": "dos", "translation": "two"},
+        {"word": "tres", "translation": "three"},
+        {"word": "cuatro", "translation": "four"}
+    ],
+    "vegetables": [
+        {"word": "patata", "translation": "potato"},
+        {"word": "zanahoria", "translation": "carrot"},
+        {"word": "tomate", "translation": "tomato"},
+        {"word": "judía", "translation": "beans"}
+    ],
+    "family": [
+        {"word": "padre", "translation": "father"},
+        {"word": "madre", "translation": "mother"},
+        {"word": "hijo", "translation": "son"},
+        {"word": "hija", "translation": "daughter"}
+    ]
+}
