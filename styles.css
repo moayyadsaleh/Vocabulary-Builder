@@ -125,14 +125,14 @@ button:hover {
 }
 
 .pronunciation-indicator {
-  color: #007bff;
+  color: maroon;
   font-size: 18px;
   margin-left: 10px;
 }
 
 /* Add hover effect for pronunciation indicator */
 .pronunciation-indicator:hover {
-  color: #0056b3;
+  color: maroon;
 }
 
 /* Responsive styling */

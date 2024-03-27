@@ -1,37 +1,37 @@
 {
     "languages": {
       "arabic": {
-        "animals": [
+        "weapons": [
           {"word": "قطة", "translation": "cat"},
           {"word": "كلب", "translation": "dog"},
           {"word": "فأر", "translation": "mouse"},
           {"word": "طائر", "translation": "bird"}
         ],
-        "food": [
+        "training": [
           {"word": "خبز", "translation": "bread"},
           {"word": "لحم", "translation": "meat"},
           {"word": "أرز", "translation": "rice"},
           {"word": "فاكهة", "translation": "fruit"}
         ],
-        "colors": [
+        "ranks": [
           {"word": "أحمر", "translation": "red"},
           {"word": "أصفر", "translation": "yellow"},
           {"word": "أزرق", "translation": "blue"},
           {"word": "أخضر", "translation": "green"}
         ],
-        "numbers": [
+        "intelligence": [
           {"word": "واحد", "translation": "one"},
           {"word": "اثنان", "translation": "two"},
           {"word": "ثلاثة", "translation": "three"},
           {"word": "أربعة", "translation": "four"}
         ],
-        "vegetables": [
+        "military-tactics": [
           {"word": "بطاطس", "translation": "potato"},
           {"word": "جزر", "translation": "carrot"},
           {"word": "طماطم", "translation": "tomato"},
           {"word": "فاصوليا", "translation": "beans"}
         ],
-        "family": [
+        "survival-kit": [
           {"word": "أب", "translation": "father"},
           {"word": "أم", "translation": "mother"},
           {"word": "ابن", "translation": "son"},
