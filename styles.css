@@ -105,23 +105,20 @@ button:hover {
 .pronunciation-indicator:active {
   transform: scale(1.1); /* Shrink the emoji slightly when clicked */
 }
+#words {
+  display: block; /* Ensure the words container is visible */
+  margin-top: 20px; /* Add some space above the word list */
+}
+
 .words-list {
-  list-style-type: none;
+  list-style-type: none; /* Remove default list styles */
   padding: 0;
   margin: 0;
 }
 
 .words-list li {
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.words-list li:hover {
-  transform: translateY(-3px);
+  font-size: 18px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Add space between words */
 }
 
 .pronunciation-indicator {
@@ -161,4 +158,24 @@ button:hover {
 /* Style for the pronunciation indicator emoji when clicked */
 .pronunciation-indicator:active {
   transform: scale(1.1); /* Shrink the emoji slightly when clicked */
+}
+#categories button {
+  background-color: maroon; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the button circular */
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  overflow: hidden; /* Ensures the button stays circular even with uneven content */
+}
+
+#categories button:hover {
+  background-color: black;
 }
