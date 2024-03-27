@@ -33,21 +33,27 @@ function selectLanguage(language) {
 function selectCategory(category) {
   const wordsList = document.getElementById("wordsList");
   wordsList.innerHTML = "";
-  vocabulary[category].forEach((wordObj) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
-    // Adding pronunciation using Responsive Voice API
-    const pronunciation = wordObj.pronunciation || wordObj.word;
-    const pronunciationIndicator = document.createElement("span");
-    pronunciationIndicator.textContent = "🔊";
-    pronunciationIndicator.classList.add("pronunciation-indicator");
-    pronunciationIndicator.addEventListener("click", () => {
-      pronounceWord(pronunciation, currentLanguage);
+
+  // Check if vocabulary is loaded and if the selected category exists
+  if (vocabulary && vocabulary[category]) {
+    vocabulary[category].forEach((wordObj) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
+      // Adding pronunciation using Responsive Voice API
+      const pronunciation = wordObj.pronunciation || wordObj.word;
+      const pronunciationIndicator = document.createElement("span");
+      pronunciationIndicator.textContent = "🔊";
+      pronunciationIndicator.classList.add("pronunciation-indicator");
+      pronunciationIndicator.addEventListener("click", () => {
+        pronounceWord(pronunciation, currentLanguage);
+      });
+      listItem.appendChild(pronunciationIndicator);
+      wordsList.appendChild(listItem);
     });
-    listItem.appendChild(pronunciationIndicator);
-    wordsList.appendChild(listItem);
-  });
-  document.getElementById("words").style.display = "block";
+    document.getElementById("words").style.display = "block";
+  } else {
+    console.error("Category not found in vocabulary:", category);
+  }
 }
 
 function pronounceWord(word, language) {
