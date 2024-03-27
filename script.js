@@ -13,11 +13,6 @@ function loadData(callback) {
   xhr.send(null);
 }
 
-// Load vocabulary data
-loadData(function (response) {
-  vocabulary = JSON.parse(response);
-});
-
 let currentLanguage;
 
 function selectLanguage(language) {
@@ -25,6 +20,10 @@ function selectLanguage(language) {
   categoriesDiv.style.display = "block";
   document.getElementById("words").style.display = "none";
   currentLanguage = language;
+  // Load vocabulary data after language selection
+  loadData(function (response) {
+    vocabulary = JSON.parse(response);
+  });
 }
 
 function selectCategory(category) {
