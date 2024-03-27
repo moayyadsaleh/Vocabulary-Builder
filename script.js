@@ -16,20 +16,7 @@ function loadData(callback) {
 // Load vocabulary data
 loadData(function (response) {
   vocabulary = JSON.parse(response);
-
-  // Now that vocabulary is loaded, you can proceed with other functions
-  setupLanguageButtons();
 });
-
-function setupLanguageButtons() {
-  // Add event listeners to language buttons
-  const languageButtons = document.querySelectorAll("#languages button");
-  languageButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      selectLanguage(button.dataset.language);
-    });
-  });
-}
 
 let currentLanguage;
 
