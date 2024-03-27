@@ -1,10 +1,10 @@
 let vocabulary;
 
 // Function to load JSON data
-function loadData(language, callback) {
+function loadData(callback) {
   const xhr = new XMLHttpRequest();
   xhr.overrideMimeType("application/json");
-  xhr.open("GET", `${language}.json`, true);
+  xhr.open("GET", "data.json", true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       callback(xhr.responseText);
@@ -13,12 +13,10 @@ function loadData(language, callback) {
   xhr.send(null);
 }
 
-// Load vocabulary data for a specific language
-function loadLanguageData(language) {
-  loadData(language, function (response) {
-    vocabulary = JSON.parse(response);
-  });
-}
+// Load vocabulary data
+loadData(function (response) {
+  vocabulary = JSON.parse(response);
+});
 
 let currentLanguage;
 
@@ -27,33 +25,26 @@ function selectLanguage(language) {
   categoriesDiv.style.display = "block";
   document.getElementById("words").style.display = "none";
   currentLanguage = language;
-  loadLanguageData(language); // Load vocabulary data for the selected language
 }
 
 function selectCategory(category) {
   const wordsList = document.getElementById("wordsList");
   wordsList.innerHTML = "";
-
-  // Check if vocabulary is loaded and if the selected category exists
-  if (vocabulary && vocabulary[category]) {
-    vocabulary[category].forEach((wordObj) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
-      // Adding pronunciation using Responsive Voice API
-      const pronunciation = wordObj.pronunciation || wordObj.word;
-      const pronunciationIndicator = document.createElement("span");
-      pronunciationIndicator.textContent = "🔊";
-      pronunciationIndicator.classList.add("pronunciation-indicator");
-      pronunciationIndicator.addEventListener("click", () => {
-        pronounceWord(pronunciation, currentLanguage);
-      });
-      listItem.appendChild(pronunciationIndicator);
-      wordsList.appendChild(listItem);
+  vocabulary.languages[currentLanguage][category].forEach((wordObj) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = wordObj.word + " (" + wordObj.translation + ")";
+    // Adding pronunciation using Responsive Voice API
+    const pronunciation = wordObj.pronunciation || wordObj.word;
+    const pronunciationIndicator = document.createElement("span");
+    pronunciationIndicator.textContent = "🔊";
+    pronunciationIndicator.classList.add("pronunciation-indicator");
+    pronunciationIndicator.addEventListener("click", () => {
+      pronounceWord(pronunciation, currentLanguage);
     });
-    document.getElementById("words").style.display = "block";
-  } else {
-    console.error("Category not found in vocabulary:", category);
-  }
+    listItem.appendChild(pronunciationIndicator);
+    wordsList.appendChild(listItem);
+  });
+  document.getElementById("words").style.display = "block";
 }
 
 function pronounceWord(word, language) {
@@ -77,7 +68,7 @@ function getVoiceForLanguage(language) {
     french: "French Female",
     korean: "Korean Female",
     chinese: "Chinese Female",
-    persian: "Arabic Female",
+    persian: "Farsi Female",
     russian: "Russian Female",
     thai: "Thai Female",
   };
