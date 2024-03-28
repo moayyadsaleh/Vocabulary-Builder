@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Vocabulary Matching Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      #game-container {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #language-select {
+        margin-bottom: 20px;
+      }
+
+      #word-display {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .choice-button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .choice-button:hover {
+        background-color: #45a049;
+      }
+
+      #result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="game-container">
+      <h1>Language Vocabulary Matching Game</h1>
+      <div id="language-select">
+        <label for="language">Select Your Preferred Language:</label>
+        <select id="language">
+          <option value="arabic">Arabic</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="chinese">Chinese</option>
+          <option value="korean">Korean</option>
+          <option value="thai">Thai</option>
+          <option value="russian">Russian</option>
+        </select>
+      </div>
+      <div id="word-display"></div>
+      <div id="choices"></div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const words = {
+        arabic: [
+          { word: "مرحبا", meaning: "Hello" },
+          { word: "شكرا", meaning: "Thank you" },
+          { word: "ماء", meaning: "Water" },
+        ],
+        spanish: [
+          { word: "Hola", meaning: "Hello" },
+          { word: "Gracias", meaning: "Thank you" },
+          { word: "Agua", meaning: "Water" },
+        ],
+        french: [
+          { word: "Bonjour", meaning: "Hello" },
+          { word: "Merci", meaning: "Thank you" },
+          { word: "Eau", meaning: "Water" },
+        ],
+        chinese: [
+          { word: "你好", meaning: "Hello" },
+          { word: "谢谢", meaning: "Thank you" },
+          { word: "水", meaning: "Water" },
+        ],
+        korean: [
+          { word: "안녕하세요", meaning: "Hello" },
+          { word: "감사합니다", meaning: "Thank you" },
+          { word: "물", meaning: "Water" },
+        ],
+        thai: [
+          { word: "สวัสดี", meaning: "Hello" },
+          { word: "ขอบคุณ", meaning: "Thank you" },
+          { word: "น้ำ", meaning: "Water" },
+        ],
+        russian: [
+          { word: "Привет", meaning: "Hello" },
+          { word: "Спасибо", meaning: "Thank you" },
+          { word: "Вода", meaning: "Water" },
+        ],
+      };
+
+      const languageSelect = document.getElementById("language");
+      const wordDisplay = document.getElementById("word-display");
+      const choicesContainer = document.getElementById("choices");
+      const resultDisplay = document.getElementById("result");
+
+      let currentLanguage = languageSelect.value;
+      let currentWordIndex = 0;
+      let score = 0;
+
+      function startGame() {
+        currentLanguage = languageSelect.value;
+        currentWordIndex = 0;
+        score = 0;
+        resultDisplay.textContent = "";
+        displayWord();
+        displayChoices();
+      }
+
+      function displayWord() {
+        wordDisplay.textContent = words[currentLanguage][currentWordIndex].word;
+      }
+
+      function displayChoices() {
+        choicesContainer.innerHTML = "";
+        const meanings = [];
+        const correctMeaning = words[currentLanguage][currentWordIndex].meaning;
+        meanings.push(correctMeaning);
+        while (meanings.length < 4) {
+          const randomIndex = Math.floor(
+            Math.random() * words[currentLanguage].length
+          );
+          const randomMeaning = words[currentLanguage][randomIndex].meaning;
+          if (!meanings.includes(randomMeaning)) {
+            meanings.push(randomMeaning);
+          }
+        }
+        meanings.sort(() => Math.random() - 0.5);
+        meanings.forEach((meaning) => {
+          const button = document.createElement("button");
+          button.textContent = meaning;
+          button.classList.add("choice-button");
+          button.addEventListener("click", () =>
+            checkAnswer(meaning === correctMeaning)
+          );
+          choicesContainer.appendChild(button);
+        });
+      }
+
+      function checkAnswer(isCorrect) {
+        if (isCorrect) {
+          score++;
+          resultDisplay.textContent = "Correct!";
+        } else {
+          resultDisplay.textContent = "Incorrect!";
+        }
+        currentWordIndex++;
+        if (currentWordIndex < words[currentLanguage].length) {
+          displayWord();
+          displayChoices();
+        } else {
+          resultDisplay.textContent += ` Game Over! Your score is ${score}/${words[currentLanguage].length}`;
+        }
+      }
+
+      languageSelect.addEventListener("change", startGame);
+
+      startGame();
+    </script>
+  </body>
+</html>
