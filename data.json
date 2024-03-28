@@ -7,150 +7,162 @@
         {"word": "فأر", "translation": "mouse"},
         {"word": "طائر", "translation": "bird"}
       ],
-      "food": [
-        {"word": "خبز", "translation": "bread"},
-        {"word": "لحم", "translation": "meat"},
-        {"word": "أرز", "translation": "rice"},
-        {"word": "فاكهة", "translation": "fruit"}
-      ],
+      "body-parts": [],
       "colors": [
         {"word": "أحمر", "translation": "red"},
-        {"word": "أصفر", "translation": "yellow"},
         {"word": "أزرق", "translation": "blue"},
-        {"word": "أخضر", "translation": "green"}
-      ],
-      "numbers": [
-        {"word": "واحد", "translation": "one"},
-        {"word": "اثنان", "translation": "two"},
-        {"word": "ثلاثة", "translation": "three"},
-        {"word": "أربعة", "translation": "four"}
-      ],
-      "vegetables": [
-        {"word": "بطاطس", "translation": "potato"},
-        {"word": "جزر", "translation": "carrot"},
-        {"word": "طماطم", "translation": "tomato"},
-        {"word": "فاصوليا", "translation": "beans"}
+        {"word": "أخضر", "translation": "green"},
+        {"word": "أصفر", "translation": "yellow"}
       ],
       "family": [
         {"word": "أب", "translation": "father"},
         {"word": "أم", "translation": "mother"},
         {"word": "ابن", "translation": "son"},
         {"word": "ابنة", "translation": "daughter"}
-      ]
-    },
-    "spanish": {
-      "animals": [
-        {"word": "gato", "translation": "cat"},
-        {"word": "perro", "translation": "dog"},
-        {"word": "ratón", "translation": "mouse"},
-        {"word": "pájaro", "translation": "bird"}
       ],
       "food": [
-        {"word": "pan", "translation": "bread"},
-        {"word": "carne", "translation": "meat"},
-        {"word": "arroz", "translation": "rice"},
-        {"word": "fruta", "translation": "fruit"}
+        {"word": "خبز", "translation": "bread"},
+        {"word": "لحم", "translation": "meat"},
+        {"word": "أرز", "translation": "rice"},
+        {"word": "فاكهة", "translation": "fruit"}
       ],
-      "colors": [
-        {"word": "rojo", "translation": "red"},
-        {"word": "amarillo", "translation": "yellow"},
-        {"word": "azul", "translation": "blue"},
-        {"word": "verde", "translation": "green"}
-      ],
+      "intelligence": [],
+      "military-tactics": [],
       "numbers": [
-        {"word": "uno", "translation": "one"},
-        {"word": "dos", "translation": "two"},
-        {"word": "tres", "translation": "three"},
-        {"word": "cuatro", "translation": "four"}
+        {"word": "واحد", "translation": "one"},
+        {"word": "اثنان", "translation": "two"},
+        {"word": "ثلاثة", "translation": "three"},
+        {"word": "أربعة", "translation": "four"}
       ],
-      "vegetables": [
-        {"word": "patata", "translation": "potato"},
-        {"word": "zanahoria", "translation": "carrot"},
-        {"word": "tomate", "translation": "tomato"},
-        {"word": "judía", "translation": "beans"}
-      ],
-      "family": [
-        {"word": "padre", "translation": "father"},
-        {"word": "madre", "translation": "mother"},
-        {"word": "hijo", "translation": "son"},
-        {"word": "hija", "translation": "daughter"}
-      ]
+      "ranks": [],
+      "survival-kit": [],
+      "transportation": [],
+      "training": [],
+      "weapons": [],
+      "weather": []
     },
     "french": {
       "animals": [
         {"word": "chat", "translation": "cat"},
         {"word": "chien", "translation": "dog"},
-        {"word": "souris", "translation": "mouse"},
-        {"word": "oiseau", "translation": "bird"}
+        {"word": "oiseau", "translation": "bird"},
+        {"word": "souris", "translation": "mouse"}
       ],
-      "food": [
-        {"word": "pain", "translation": "bread"},
-        {"word": "viande", "translation": "meat"},
-        {"word": "riz", "translation": "rice"},
-        {"word": "fruit", "translation": "fruit"}
-      ],
+      "body-parts": [],
       "colors": [
-        {"word": "rouge", "translation": "red"},
-        {"word": "jaune", "translation": "yellow"},
         {"word": "bleu", "translation": "blue"},
+        {"word": "jaune", "translation": "yellow"},
+        {"word": "rouge", "translation": "red"},
         {"word": "vert", "translation": "green"}
       ],
-      "numbers": [
-        {"word": "un", "translation": "one"},
-        {"word": "deux", "translation": "two"},
-        {"word": "trois", "translation": "three"},
-        {"word": "quatre", "translation": "four"}
-      ],
-      "vegetables": [
-        {"word": "pomme de terre", "translation": "potato"},
-        {"word": "carotte", "translation": "carrot"},
-        {"word": "tomate", "translation": "tomato"},
-        {"word": "haricot", "translation": "beans"}
-      ],
       "family": [
-        {"word": "père", "translation": "father"},
-        {"word": "mère", "translation": "mother"},
         {"word": "fils", "translation": "son"},
-        {"word": "fille", "translation": "daughter"}
-      ]
+        {"word": "fille", "translation": "daughter"},
+        {"word": "père", "translation": "father"},
+        {"word": "mère", "translation": "mother"}
+      ],
+      "food": [
+        {"word": "fruit", "translation": "fruit"},
+        {"word": "pain", "translation": "bread"},
+        {"word": "riz", "translation": "rice"},
+        {"word": "viande", "translation": "meat"}
+      ],
+      "intelligence": [],
+      "military-tactics": [],
+      "numbers": [
+        {"word": "deux", "translation": "two"},
+        {"word": "quatre", "translation": "four"},
+        {"word": "trois", "translation": "three"},
+        {"word": "un", "translation": "one"}
+      ],
+      "ranks": [],
+      "survival-kit": [],
+      "transportation": [],
+      "training": [],
+      "weapons": [],
+      "weather": []
     },
     "korean": {
       "animals": [
         {"word": "고양이", "translation": "cat"},
         {"word": "개", "translation": "dog"},
-        {"word": "쥐", "translation": "mouse"},
-        {"word": "새", "translation": "bird"}
+        {"word": "새", "translation": "bird"},
+        {"word": "쥐", "translation": "mouse"}
       ],
-      "food": [
-        {"word": "빵", "translation": "bread"},
-        {"word": "고기", "translation": "meat"},
-        {"word": "밥", "translation": "rice"},
-        {"word": "과일", "translation": "fruit"}
-      ],
+      "body-parts": [],
       "colors": [
         {"word": "빨강", "translation": "red"},
         {"word": "노랑", "translation": "yellow"},
         {"word": "파랑", "translation": "blue"},
         {"word": "초록", "translation": "green"}
       ],
+      "family": [
+        {"word": "아버지", "translation": "father"},
+        {"word": "어머니", "translation": "mother"},
+        {"word": "아들", "translation": "son"},
+        {"word": "딸", "translation": "daughter"}
+      ],
+      "food": [
+        {"word": "과일", "translation": "fruit"},
+        {"word": "빵", "translation": "bread"},
+        {"word": "밥", "translation": "rice"},
+        {"word": "고기", "translation": "meat"}
+      ],
+      "intelligence": [],
+      "military-tactics": [],
       "numbers": [
-        {"word": "하나", "translation": "one"},
+        {"word": "넷", "translation": "four"},
         {"word": "둘", "translation": "two"},
         {"word": "셋", "translation": "three"},
-        {"word": "넷", "translation": "four"}
+        {"word": "하나", "translation": "one"}
       ],
-      "vegetables": [
-        {"word": "감자", "translation": "potato"},
-      {"word": "당근", "translation": "carrot"},
-      {"word": "토마토", "translation": "tomato"},
-      {"word": "콩", "translation": "beans"}
-    ],
-    "family": [
-      {"word": "아버지", "translation": "father"},
-      {"word": "어머니", "translation": "mother"},
-      {"word": "아들", "translation": "son"},
-      {"word": "딸", "translation": "daughter"}
-    ]
+      "ranks": [],
+      "survival-kit": [],
+      "transportation": [],
+      "training": [],
+      "weapons": [],
+      "weather": []
+    },
+    "spanish": {
+      "animals": [
+        {"word": "gato", "translation": "cat"},
+        {"word": "perro", "translation": "dog"},
+        {"word": "pájaro", "translation": "bird"},
+        {"word": "ratón", "translation": "mouse"}
+      ],
+      "body-parts": [],
+      "colors": [
+        {"word": "azul", "translation": "blue"},
+        {"word": "rojo", "translation": "red"},
+        {"word": "verde", "translation": "green"},
+        {"word": "amarillo", "translation": "yellow"}
+      ],
+      "family": [
+        {"word": "padre", "translation": "father"},
+        {"word": "madre", "translation": "mother"},
+        {"word": "hijo", "translation": "son"},
+        {"word": "hija", "translation": "daughter"}
+      ],
+      "food": [
+        {"word": "fruta", "translation": "fruit"},
+        {"word": "pan", "translation": "bread"},
+        {"word": "arroz", "translation": "rice"},
+        {"word": "carne", "translation": "meat"}
+      ],
+      "intelligence": [],
+      "military-tactics": [],
+      "numbers": [
+        {"word": "cuatro", "translation": "four"},
+        {"word": "dos", "translation": "two"},
+        {"word": "tres", "translation": "three"},
+        {"word": "uno", "translation": "one"}
+      ],
+      "ranks": [],
+      "survival-kit": [],
+      "transportation": [],
+      "training": [],
+      "weapons": [],
+      "weather": []
+    }
   }
-}
 }
