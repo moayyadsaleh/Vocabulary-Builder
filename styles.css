@@ -5,9 +5,12 @@ body {
 }
 #dedication {
   text-align: center;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
 }
 #left-logo {
   position: fixed;
@@ -177,4 +180,29 @@ button:hover {
 
 #categories button:hover {
   background-color: black;
+}
+
+#video-container {
+  text-align: center;
+  margin-top: 50px; /* Adjust the margin to move the video down */
+}
+
+video {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Set maximum width to maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add a slight border-radius for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed for phone screens */
+  #video-container {
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+
+  video {
+    width: 100%; /* Make video full width on smaller screens */
+    max-width: none; /* Remove max-width */
+  }
 }
