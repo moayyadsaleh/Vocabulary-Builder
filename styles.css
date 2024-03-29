@@ -7,11 +7,14 @@ body {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-
   line-height: 1.8;
-  color: #555;
-  margin-bottom: 5px;
-  margin-top: 0px;
+  color: whitesmoke;
+  margin-bottom: 20px; /* Increased margin for better separation */
+  margin-top: 20px; /* Increased margin for better separation */
+  padding: 20px; /* Added padding for better spacing */
+  background-color: black; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 #left-logo {
   position: fixed;
@@ -31,12 +34,6 @@ body {
   z-index: 1000;
 }
 
-#dedication p {
-  max-width: 800px;
-  margin: 50px auto 0 auto; /* Adjust top margin to move the paragraph down */
-  margin-top: 100px;
-  margin-bottom: 20px;
-}
 #languages button {
   margin: 5px;
   padding: 10px 20px;
@@ -83,7 +80,7 @@ button:hover {
   margin-bottom: 10px;
 }
 .pronunciation-indicator {
-  color: #007bff;
+  color: black;
   font-size: 18px;
   margin-left: 10px;
 }
