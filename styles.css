@@ -7,10 +7,11 @@ body {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-  font-style: italic;
+
   line-height: 1.8;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-top: 0px;
 }
 #left-logo {
   position: fixed;
@@ -107,31 +108,51 @@ button:hover {
 .pronunciation-indicator:active {
   transform: scale(1.1); /* Shrink the emoji slightly when clicked */
 }
+/* Styling for a container holding the words */
+/* Styling for a container holding the words */
+/* Styling for a container holding the words */
 #words {
   display: block; /* Ensure the words container is visible */
   margin-top: 20px; /* Add some space above the word list */
+  background-color: #70002e; /* Add background color */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Add rounded corners */
+  color: whitesmoke;
 }
 
+/* Styling for the list of words */
 .words-list {
   list-style-type: none; /* Remove default list styles */
-  padding: 0;
-  margin: 0;
+  padding: 0; /* Remove padding to have more control over spacing */
+  margin: 0; /* Remove margin to have more control over spacing */
 }
 
+/* Styling for each individual word in the list */
 .words-list li {
-  font-size: 18px; /* Adjust font size as needed */
-  margin-bottom: 10px; /* Add space between words */
+  font-size: 24px; /* Increased font size for better readability */
+  margin-bottom: 15px; /* Add space between words */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition effect */
 }
 
+/* Styling for the separating line */
+.words-list li:not(:last-child) {
+  border-bottom: 1px solid #ccc; /* Add border to separate words */
+}
+
+/* Hover effect */
+.words-list li:hover {
+  background-color: black; /* Change background color on hover */
+}
 .pronunciation-indicator {
-  color: maroon;
+  color: #70002e;
   font-size: 18px;
   margin-left: 10px;
 }
 
 /* Add hover effect for pronunciation indicator */
 .pronunciation-indicator:hover {
-  color: maroon;
+  color: #70002e;
 }
 
 /* Responsive styling */
@@ -162,7 +183,7 @@ button:hover {
   transform: scale(1.1); /* Shrink the emoji slightly when clicked */
 }
 #categories button {
-  background-color: maroon; /* Green */
+  background-color: #70002e; /* Green */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -182,27 +203,18 @@ button:hover {
   background-color: black;
 }
 
+/* Style for the video container */
 #video-container {
-  text-align: center;
-  margin-top: 50px; /* Adjust the margin to move the video down */
+  max-width: 800px; /* Adjust as needed */
+  margin: 80px auto 0; /* Added 50px top margin */
+  border: 2px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Style for the video element */
 video {
-  width: 80%; /* Adjust the width as needed */
-  max-width: 800px; /* Set maximum width to maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Add a slight border-radius for a softer look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-}
-
-@media (max-width: 768px) {
-  /* Adjust breakpoint as needed for phone screens */
-  #video-container {
-    margin-top: 20px; /* Adjust margin for smaller screens */
-  }
-
-  video {
-    width: 100%; /* Make video full width on smaller screens */
-    max-width: none; /* Remove max-width */
-  }
+  width: 100%;
+  display: block;
 }
