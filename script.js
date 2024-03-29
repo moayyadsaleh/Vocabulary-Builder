@@ -42,14 +42,17 @@ function selectCategory(category) {
     pronunciationIndicator.addEventListener("click", () => {
       pronounceWord(pronunciation, currentLanguage);
     });
-    document.getElementById("words").scrollIntoView({ behavior: "smooth" });
 
     listItem.appendChild(pronunciationIndicator);
     wordsList.appendChild(listItem);
   });
-  document.getElementById("words").style.display = "block";
-}
 
+  // Display the words section
+  document.getElementById("words").style.display = "block";
+
+  // Scroll to the words section
+  document.getElementById("words").scrollIntoView({ behavior: "smooth" });
+}
 function pronounceWord(word, language) {
   // Attempt to pronounce with the specified language
   responsiveVoice.speak(word, getVoiceForLanguage(language), {
