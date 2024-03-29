@@ -25,6 +25,7 @@ function selectLanguage(language) {
   categoriesDiv.style.display = "block";
   document.getElementById("words").style.display = "none";
   currentLanguage = language;
+  document.getElementById("categories").scrollIntoView({ behavior: "smooth" });
 }
 
 function selectCategory(category) {
@@ -41,6 +42,8 @@ function selectCategory(category) {
     pronunciationIndicator.addEventListener("click", () => {
       pronounceWord(pronunciation, currentLanguage);
     });
+    document.getElementById("words").scrollIntoView({ behavior: "smooth" });
+
     listItem.appendChild(pronunciationIndicator);
     wordsList.appendChild(listItem);
   });
