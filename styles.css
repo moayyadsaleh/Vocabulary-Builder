@@ -215,3 +215,6 @@ video {
   width: 100%;
   display: block;
 }
+#dedication:hover {
+  background-color: #70002e; /* Change background color on hover */
+}

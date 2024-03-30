@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 30px;
+      }
+
+      #language-select {
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #game-container {
+        display: none;
+        margin-top: 20px;
+      }
+
+      #word-display {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+      }
+
+      #result {
+        font-style: italic;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the Vocabulary Game!</h1>
+    <label for="language-select">Select Language:</label>
+    <select id="language-select">
+      <option value="spanish">Spanish</option>
+      <option value="arabic">Arabic</option>
+      <option value="chinese">Chinese</option>
+      <option value="french">French</option>
+      <option value="korean">Korean</option>
+      <option value="persian">Persian</option>
+      <option value="russian">Russian</option>
+      <option value="thai">Thai</option>
+    </select>
+    <br />
+    <button onclick="startGame()">Start Game</button>
+    <div id="game-container">
+      <h2>Translate the Word:</h2>
+      <p id="word-display"></p>
+      <input type="text" id="translation-input" />
+      <br />
+      <button onclick="checkTranslation()">Check</button>
+      <p id="result"></p>
+      <button onclick="nextWord()">Next Word</button>
+    </div>
+
+    <script>
+      let words = {
+        spanish: ["manzana", "plátano", "coche", "casa", "árbol"],
+        arabic: ["تفاحة", "موزة", "سيارة", "منزل", "شجرة"],
+        chinese: ["苹果", "香蕉", "汽车", "房子", "树"],
+        french: ["pomme", "banane", "voiture", "maison", "arbre"],
+        korean: ["사과", "바나나", "차", "집", "나무"],
+        persian: ["سیب", "موز", "ماشین", "خانه", "درخت"],
+        russian: ["яблоко", "банан", "автомобиль", "дом", "дерево"],
+        thai: ["แอปเปิ้ล", "กล้วย", "รถยนต์", "บ้าน", "ต้นไม้"],
+      };
+
+      let currentLanguage = "";
+      let currentWordIndex = 0;
+
+      function startGame() {
+        const languageSelect = document.getElementById("language-select");
+        currentLanguage = languageSelect.value;
+        currentWordIndex = 0;
+        displayWord();
+        document.getElementById("game-container").style.display = "block";
+      }
+
+      function displayWord() {
+        document.getElementById("word-display").innerText =
+          words[currentLanguage][currentWordIndex];
+      }
+
+      function checkTranslation() {
+        const translationInput = document
+          .getElementById("translation-input")
+          .value.toLowerCase();
+        const correctTranslation =
+          words.english[currentWordIndex].toLowerCase();
+        if (translationInput === correctTranslation) {
+          document.getElementById("result").innerText = "Correct!";
+        } else {
+          document.getElementById("result").innerText = "Incorrect. Try again.";
+        }
+      }
+
+      function nextWord() {
+        currentWordIndex =
+          (currentWordIndex + 1) % words[currentLanguage].length;
+        displayWord();
+        document.getElementById("translation-input").value = "";
+        document.getElementById("result").innerText = "";
+      }
+    </script>
+  </body>
+</html>
