@@ -28,12 +28,6 @@
       p {
         line-height: 1.6;
       }
-      #video-container {
-        margin-bottom: 20px;
-      }
-      video {
-        max-width: 100%;
-      }
       #languages,
       #categories,
       #words {
@@ -72,39 +66,15 @@
     <div id="container">
       <h1>Special Ops Vocabulary E-book</h1>
 
-      <!-- Video -->
-      <div id="video-container">
-        <video controls>
-          <source src="./intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Logos -->
-      <div style="display: flex; justify-content: space-between">
-        <img
-          id="left-logo"
-          src="https://live.staticflickr.com/65535/51262624119_07fb913283_z.jpg"
-          alt="Left Logo"
-        />
-        <img
-          id="right-logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/University_of_Montana_logo.png/1200px-University_of_Montana_logo.png"
-          alt="Right Logo"
-        />
-      </div>
-
       <!-- Dedication -->
       <div id="dedication">
         <p>
-          This Vocabulary Builder app is a dedicated effort from the University
-          of Montana-DCLCP to support special forces personnel. Designed to aid
-          language learning, this app offers a selection of languages including
-          Arabic, Chinese, French, Korean, Persian, Russian, Spanish, and Thai.
-          Users can choose from various categories such as animals, body parts,
-          colors, family, food, intelligence, military tactics, numbers, ranks,
-          survival kit, transportation, vegetables, weapons, and weather to
-          expand their vocabulary.
+          This Vocabulary Builder is designed to aid language learning. This app
+          offers a selection of languages where users can choose from various
+          categories such as animals, body parts, colors, family, food,
+          intelligence, military tactics, numbers, ranks, survival kit,
+          transportation, vegetables, weapons, and weather to expand their
+          vocabulary.
         </p>
       </div>
 
@@ -114,10 +84,7 @@
         <button onclick="selectLanguage('chinese')">Chinese</button>
         <button onclick="selectLanguage('french')">French</button>
         <button onclick="selectLanguage('korean')">Korean</button>
-        <button onclick="selectLanguage('persian')">Persian</button>
-        <button onclick="selectLanguage('russian')">Russian</button>
         <button onclick="selectLanguage('spanish')">Spanish</button>
-        <button onclick="selectLanguage('thai')">Thai</button>
       </div>
       <div id="categories" style="display: none">
         <button onclick="selectCategory('adjectives')">Adjectives</button>
