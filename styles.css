@@ -1,220 +1,180 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: whitesmoke;
 }
+
 #dedication {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 1.8;
   color: whitesmoke;
-  margin-bottom: 20px; /* Increased margin for better separation */
-  margin-top: 20px; /* Increased margin for better separation */
-  padding: 20px; /* Added padding for better spacing */
-  background-color: black; /* Light background color */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-}
-#left-logo {
-  position: fixed;
-  top: 20px;
-  left: 0;
-  width: 200px;
-  height: auto;
-  z-index: 1000;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
+#dedication:hover {
+  background: linear-gradient(135deg, #70002e, #0f172a);
+  transform: scale(1.05);
+}
+
+#left-logo,
 #right-logo {
   position: fixed;
   top: 20px;
-  right: 0;
-  width: 200px;
+  width: 150px;
   height: auto;
   z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+#left-logo:hover,
+#right-logo:hover {
+  transform: scale(1.1);
 }
 
 #languages button {
   margin: 5px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   font-size: 16px;
   border: 2px solid black;
-  background-color: #fff;
+  background: linear-gradient(135deg, #fff, #333);
   color: #333;
   cursor: pointer;
-  background-color: ;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 #languages button:hover {
-  background-color: #70002e;
-  color: #fff;
+  background: linear-gradient(135deg, #70002e, #333);
+  color: whitesmoke;
   border-color: whitesmoke;
+  transform: translateY(-3px);
 }
+
 button {
   margin: 5px;
   padding: 10px 20px;
   font-size: 16px;
   border: 2px solid #333;
-  background-color: #fff;
+  background: linear-gradient(135deg, #fff, #333);
   color: #333;
   cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #70002e;
-  color: #fff;
-  border-color: whitesmoke;
+  background: linear-gradient(135deg, #70002e, #333);
+  color: whitesmoke;
+  transform: translateY(-3px);
 }
 
-@media only screen and (max-width: 600px) {
-  #languages button {
-    margin: 10px;
-  }
-}
 .words-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-.words-list li {
-  margin-bottom: 10px;
-}
-.pronunciation-indicator {
-  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-size: 18px;
-  margin-left: 10px;
-}
-/* Responsive styling */
-@media only screen and (max-width: 600px) {
-  #dedication p {
-    font-size: 14px; /* Decrease font size for smaller screens */
-    line-height: 1.4; /* Decrease line height for smaller screens */
-  }
-}
-/* Style for the pronunciation indicator emoji */
-.pronunciation-indicator {
-  cursor: pointer; /* Change cursor to pointer when hovering over the emoji */
 }
 
-/* Style for the pronunciation indicator emoji when hovered over */
-.pronunciation-indicator:hover {
-  transform: scale(1.2); /* Enlarge the emoji when hovered over */
-}
-
-/* Style for the pronunciation indicator emoji when clicked */
-.pronunciation-indicator:active {
-  transform: scale(1.1); /* Shrink the emoji slightly when clicked */
-}
-/* Styling for a container holding the words */
-/* Styling for a container holding the words */
-/* Styling for a container holding the words */
-#words {
-  display: block; /* Ensure the words container is visible */
-  margin-top: 20px; /* Add some space above the word list */
-  background-color: #70002e; /* Add background color */
-  padding: 20px; /* Add padding for better spacing */
-  border-radius: 10px; /* Add rounded corners */
-  color: whitesmoke;
-}
-
-/* Styling for the list of words */
-.words-list {
-  list-style-type: none; /* Remove default list styles */
-  padding: 0; /* Remove padding to have more control over spacing */
-  margin: 0; /* Remove margin to have more control over spacing */
-}
-
-/* Styling for each individual word in the list */
 .words-list li {
-  font-size: 24px; /* Increased font size for better readability */
-  margin-bottom: 15px; /* Add space between words */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: all 0.3s ease; /* Smooth transition effect */
-}
-
-/* Styling for the separating line */
-.words-list li:not(:last-child) {
-  border-bottom: 1px solid #ccc; /* Add border to separate words */
-}
-
-/* Hover effect */
-.words-list li:hover {
-  background-color: black; /* Change background color on hover */
-}
-.pronunciation-indicator {
-  color: #70002e;
-  font-size: 18px;
-  margin-left: 10px;
-}
-
-/* Add hover effect for pronunciation indicator */
-.pronunciation-indicator:hover {
-  color: #70002e;
-}
-
-/* Responsive styling */
-@media only screen and (max-width: 600px) {
-  .words-list li {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  /* Stack categories each under the other for mobile view */
-  .words-list li {
-    width: 100%;
-  }
-}
-
-/* Style for the pronunciation indicator emoji */
-.pronunciation-indicator {
-  cursor: pointer; /* Change cursor to pointer when hovering over the emoji */
-}
-
-/* Style for the pronunciation indicator emoji when hovered over */
-.pronunciation-indicator:hover {
-  transform: scale(1.2); /* Enlarge the emoji when hovered over */
-}
-
-/* Style for the pronunciation indicator emoji when clicked */
-.pronunciation-indicator:active {
-  transform: scale(1.1); /* Shrink the emoji slightly when clicked */
-}
-#categories button {
-  background-color: #70002e; /* Green */
-  border: none;
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: whitesmoke;
   cursor: pointer;
-  border-radius: 50%; /* Makes the button circular */
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  overflow: hidden; /* Ensures the button stays circular even with uneven content */
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.words-list li:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+#words {
+  display: block;
+  margin-top: 20px;
+  background: rgba(112, 0, 46, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  color: whitesmoke;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#categories button {
+  background: linear-gradient(135deg, #70002e, #0f172a);
+  border: none;
+  color: whitesmoke;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 #categories button:hover {
-  background-color: black;
+  background: linear-gradient(135deg, #0f172a, #70002e);
+  transform: scale(1.1);
 }
 
-/* Style for the video container */
 #video-container {
-  max-width: 800px; /* Adjust as needed */
-  margin: 80px auto 0; /* Added 50px top margin */
-  border: 2px solid #fff;
-  border-radius: 10px;
+  max-width: 800px;
+  margin: 80px auto 0;
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Style for the video element */
 video {
   width: 100%;
   display: block;
 }
-#dedication:hover {
-  background-color: #70002e; /* Change background color on hover */
+
+.pronunciation-indicator {
+  color: #70002e;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.pronunciation-indicator:hover {
+  color: #ff4757;
+  transform: scale(1.2);
+}
+
+.pronunciation-indicator:active {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  #dedication {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #languages button {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .words-list li {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
